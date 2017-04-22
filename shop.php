@@ -1,7 +1,12 @@
+<?php
+require_once "adaptor.php";
+?>
 <html>
 <head>
 <title>Shop</title>
 <link rel = "stylesheet" href = "style.css" type = "text/css">
+    <script type = "text/javascript" src = "script.js"></script>
+    <script type = "text/javascript" src = "prototype.js"></script> 
 </head>
 <body>
 <div id = "rl">
@@ -14,6 +19,6 @@
     </div> <br>
     <h1>Shopping page for whatever we wanna sell</h1>    
 </body>
-    
+  
 
 </html>

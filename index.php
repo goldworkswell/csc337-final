@@ -1,8 +1,10 @@
 <?php
-//require_once "shop.php";
+require_once "adaptor.php";
+?>
+<?php
 
 if(isset($_GET['mode'])){
-
+    
     if ($_GET['mode'] === "register"){
      require_once "register.php";
      }
@@ -13,5 +15,8 @@ if(isset($_GET['mode'])){
 else {
     require_once "shop.php";
 }
-     
+$db = new DatabaseAdaptor ();
+if (isset($_POST['username']) && $_POST['password'] != ""){
+$db->add($_POST['username'], $_POST['password']);
+}
      ?>
