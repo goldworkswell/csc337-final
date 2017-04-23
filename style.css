@@ -1,3 +1,13 @@
 #rl{
     float:right;
+    padding-top:20px;
+    background-color:black;
+}
+#logged {
+    float:right;
+}
+#lpage {
+    
+    text-align:center;
+    
 }

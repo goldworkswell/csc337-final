@@ -31,7 +31,9 @@ class DatabaseAdaptor {
         $stmt->bindParam('username', $username);
         $stmt->execute();
         $result = $stmt->fetchAll();
+        if ($result != NULL){    
         return password_verify($_POST['password'], $result[0]['pass']);
+        }
     }
     
 }

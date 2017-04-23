@@ -9,7 +9,6 @@ if (isset($_POST['username']) && $_POST['password'] != ""){
    if($db->login($_POST['username'], $_POST['password'])) {
     session_start();
     $_SESSION['user'] = $_POST['username'];
-    echo $_SESSION['user']. " is currently logged in.";
    }
 }
 
@@ -29,5 +28,7 @@ if(isset($_GET['mode'])){
 else {
     require_once "shop.php";
 }
-
+if (isset($_SESSION['user'])){
+    header('Location: logged_in.php');
+}
 ?>
