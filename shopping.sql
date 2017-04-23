@@ -8,4 +8,3 @@ CREATE TABLE users (
     PRIMARY KEY (id),
     UNIQUE KEY (username)
 );
-INSERT INTO users VALUES (NUll, 'Admin', '1234', now());
