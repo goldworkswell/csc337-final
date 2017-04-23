@@ -11,8 +11,9 @@ require_once "adaptor.php";
 <body>
 <div id = "rl">
 <form action = "index.php" method = "get">
+    <label>Account Options</label> <br> <br>
     <input type = "hidden" value ="register" name = "mode"><input type = "submit" value = "Register">
-    </form>
+    </form> <br>
     <form action = "index.php" method = "get">
     <input type = "hidden" value = "login" name = "mode"><input type = "submit" value = "Login">
     </form>

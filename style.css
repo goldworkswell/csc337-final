@@ -1,13 +1,19 @@
 #rl{
-    float:right;
-    padding-top:20px;
-    background-color:black;
+    text-align: center;
+    font-size:16pt;
+    
 }
 #logged {
     float:right;
 }
 #lpage {
-    
     text-align:center;
     
+    padding-top:10%;
+    padding-bottom: 10%;
+}
+#signup {
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }

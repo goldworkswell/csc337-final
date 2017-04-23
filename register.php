@@ -12,11 +12,14 @@ require_once "adaptor.php";
     </head>
 <body>
     
-    <h1>Make an Account here!!!</h1>
+    
+    <div id = "signup">
+        <h1>Please select a username and password</h1>
     <form action = "index.php" method = "post">
-    <label>Username: </label><input type = "text" name = "username_reg" id = "name"> <br>
-    <label>Password: </label><input type = "password" name = "password_reg"> <br> <br>
+    <label>Username </label><br><input type = "text" name = "username_reg" id = "name"> <br> <br>
+    <label>Password </label> <br><input type = "password" name = "password_reg"> <br> <br>
     <input type = "submit" value = "Register">
     </form>
+    </div>
     </body>
 </html>
