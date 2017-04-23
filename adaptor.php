@@ -25,6 +25,14 @@ class DatabaseAdaptor {
         $stmt->bindParam('password', $hashed_pwd);
         $stmt->execute();
         }
+    public function login($username, $password){
+        $stmt = $this->DB->prepare(
+        "SELECT pass FROM users WHERE username = '$username'");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return password_verify($_POST['password'], $result[0]['pass']);
+    }
     
 }
 ?>

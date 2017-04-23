@@ -1,5 +1,18 @@
 <?php
 require_once "adaptor.php";
+
+$db = new DatabaseAdaptor ();
+if (isset($_POST['username_reg']) && $_POST['password_reg'] != ""){
+$db->add($_POST['username_reg'], $_POST['password_reg']);
+}
+if (isset($_POST['username']) && $_POST['password'] != ""){
+   if($db->login($_POST['username'], $_POST['password'])) {
+    session_start();
+    $_SESSION['user'] = $_POST['username'];
+    echo $_SESSION['user']. " is currently logged in.";
+   }
+}
+
 ?>
 <?php
 
@@ -11,12 +24,10 @@ if(isset($_GET['mode'])){
      elseif ($_GET['mode'] === "login"){
      require_once "login.php";
      }
+    
     }
 else {
     require_once "shop.php";
 }
-$db = new DatabaseAdaptor ();
-if (isset($_POST['username']) && $_POST['password'] != ""){
-$db->add($_POST['username'], $_POST['password']);
-}
-     ?>
+
+?>
