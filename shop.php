@@ -17,8 +17,16 @@ require_once "adaptor.php";
     <form action = "index.php" method = "get">
     <input type = "hidden" value = "login" name = "mode"><input type = "submit" value = "Login">
     </form>
-    </div> <br>
-    <h1>Shopping page for whatever we wanna sell</h1>    
+    </div>
+     
+    <div id = "icontainer">
+    <button id = "b1">Add to cart</button><div><img src = "img_1.jpg"></div> 
+        <button id = "b2">Add to cart</button><div><img src = "img_2.jpg"></div>
+        <button id = "b3">Add to cart</button><div><img src = "img_3.jpeg"></div>
+        <button id = "b4">Add to cart</button><div><img src = "img_4.jpg"></div>
+        <button id = "b5">Add to cart</button><div><img src = "img_5.jpg"></div> 
+        <p id = "output"></p>
+    </div>
 </body>
   
 
