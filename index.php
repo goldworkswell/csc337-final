@@ -29,6 +29,13 @@ else {
     require_once "shop.php";
 }
 if (isset($_SESSION['user'])){
-    header('Location: logged_in.php');
+    if ($_SESSION['user'] === "Admin"){
+    header('Location: admin.php');
 }
+    else {
+    header('Location: logged_in.php');
+    }
+}
+
+
 ?>

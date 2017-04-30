@@ -8,3 +8,9 @@ CREATE TABLE users (
     PRIMARY KEY (id),
     UNIQUE KEY (username)
 );
+CREATE TABLE inventory (
+    shopper_id int(11) NOT NULL AUTO_INCREMENT,
+    item varchar(64) NOT NULL DEFAULT '',
+    quantity int(11),
+    PRIMARY KEY (shopper_id)
+);
