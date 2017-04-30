@@ -1,0 +1,85 @@
+p {
+    color:white;
+    padding-top:10px;
+}
+body {
+    background-image: url("background.jpg");
+    
+}
+#outside {
+    overflow:hidden;
+    margin:0 auto;
+    
+}
+#head {
+    padding-bottom:10px;
+    padding-top:10px;
+}
+header {
+    font-size:6em;
+    text-align:center;
+    
+}
+#mission{
+    
+    padding-bottom:10px;
+    padding-top:10px;
+}
+#small{
+   
+    padding-bottom: 10px;
+    padding-top:10px;
+}
+h1,h2,h3 {
+    text-align:center;
+}
+#photo {
+   padding-bottom: 10px;
+    padding-top:10px;
+    
+}
+
+#team {
+   padding-bottom: 10px;
+    padding-top:10px;
+    
+}
+#emphasis {
+    padding-top:10px;
+    
+}
+
+.col-lg-4 {
+    text-align: center;
+}
+#mid1, #mid2 {
+    padding-left: 10px;
+    padding-right: 10px;
+    
+   
+}
+#pic1{
+    
+    padding-bottom:10px;
+}
+#pic2{
+   
+}
+#editing {
+    
+    padding-top:10px;
+}
+#left1,#left2 {
+    padding-left: 10px;
+}
+#right1, #right2 {
+    padding-right: 10px;
+  
+}
+#test {
+   margin-right: 10px;
+}
+input {
+   
+}
+
