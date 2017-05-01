@@ -1,3 +1,7 @@
+<script type = "text/javascript" src = "script.js"></script>
+    <script type = "text/javascript" src = "prototype.js"></script>
+
+
 <?php
 require_once "adaptor.php";
 
