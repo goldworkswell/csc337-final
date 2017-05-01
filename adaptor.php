@@ -35,6 +35,29 @@ class DatabaseAdaptor {
         return password_verify($_POST['password'], $result[0]['pass']);
         }
     }
-    
+    function findusernameexist($name) {
+    $task="select username, id FROM users where username = :nam";
+    $statement=$this->db->prepare($task);
+    $statement=bindParam('nam',$name);
+    $statment->execute();
+    $row=$statement->fetch(PDO::FETCH_ASSOC);
+    $row['status']='success';
+    return json_encode($row);
 }
+
+
+
+}
+
+# Query on the given username (if any).
+if (isset($_POST['username'])) {
+	# Specify that the output will be JSON.
+	header('Content-Type: application/json');
+	$base = new DatabaseAdaptor();
+	echo $base->findUsernameMatch($_POST['username']);
+}
+else {
+	header($_SERVER['SERVER_PROTOCOL'] . ' 400 Invalid Request');
+}
+
 ?>
