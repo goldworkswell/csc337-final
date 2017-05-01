@@ -41,7 +41,6 @@ require_once "adaptor.php";
     
         <div class = "container-fluid" id = "outside">
         <div class = "container-fluid" id = "small">
-        <h3>Small Text</h3>
         </div>
         
         
