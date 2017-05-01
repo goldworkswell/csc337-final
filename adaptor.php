@@ -32,21 +32,18 @@ class DatabaseAdaptor {
         $stmt->execute();
         $result = $stmt->fetchAll();
         if ($result != NULL){    
-        return password_verify($_POST['password'], $result[0]['pass']);
+            return password_verify($_POST['password'], $result[0]['pass']);
         }
     }
-    function findusernameexist($name) {
-    $task="select username, id FROM users where username = :nam";
-    $statement=$this->db->prepare($task);
-    $statement=bindParam('nam',$name);
-    $statment->execute();
-    $row=$statement->fetch(PDO::FETCH_ASSOC);
-    $row['status']='success';
-    return json_encode($row);
-}
-
-
-
+    public function findusernameexist($name) {
+        $task="select username, id FROM users where username = :nam";
+        $statement=$this->db->prepare($task);
+        $statement=bindParam('nam',$name);
+        $statment->execute();
+        $row=$statement->fetch(PDO::FETCH_ASSOC);
+        $row['status']='success';
+        return json_encode($row);
+    }  
 }
 
 # Query on the given username (if any).
