@@ -1,8 +1,13 @@
+<script type = "text/javascript" src = "script.js"></script>
+    <script type = "text/javascript" src = "prototype.js"></script>
+
+
 <?php
 require_once "adaptor.php";
 
 $db = new DatabaseAdaptor ();
-if (isset($_POST['username_reg']) && $_POST['password_reg'] != ""){
+
+if (isset($_POST['username_reg']) && $_POST['password_reg'] != ""  ){
 $db->add($_POST['username_reg'], $_POST['password_reg']);
 }
 if (isset($_POST['username']) && $_POST['password'] != ""){

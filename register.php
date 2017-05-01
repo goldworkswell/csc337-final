@@ -19,10 +19,11 @@ require_once "adaptor.php";
     <div id = "signup">
         <h1>Please select a username and password</h1>
     <form action = "index.php" method = "post">
-    <label>Username </label><br><input type = "text" name = "username_reg" id = "name"> <br> <br>
+    <label>Username </label><br><input type = "text" name = "username_reg" id = "name"> <br/><span id='errors'></span> <br/>
     <label>Password </label> <br><input type = "password" name = "password_reg"> <br> <br>
-    <input type = "submit" value = "Register" class = "btn btn-info">
+    <input type = "submit" value = "Register" class = "btn btn-info" id = "reg">
     </form>
     </div>
+    
     </body>
 </html>
