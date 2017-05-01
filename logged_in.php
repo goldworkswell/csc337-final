@@ -12,7 +12,7 @@ session_start();
 <body>
     
     
-    <a href = "index.php"><input type = "submit" value = "Log me out"></a>
+
     
     
 
@@ -22,10 +22,11 @@ session_start();
       <a class="navbar-brand" href="index.php">Dollar Shop</a>
     </div>
       <div class="navbar-header">
-      <p class="navbar-brand">Logged in as: <?=$_SESSION['user']?></p>
+      <p class="navbar-brand">Username: <?=$_SESSION['user']?></p>
     </div>
       <ul class="nav navbar-nav navbar-right">
-      <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>
+      <a href = "cart.php"><input type = "submit" value = "Cart" class = "btn btn-danger navbar- btn"></a>
+        <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>
       </ul>
       
       
