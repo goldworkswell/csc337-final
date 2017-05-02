@@ -11,20 +11,20 @@ session_start();
 <body>
     
     
-    <a href = "index.php"><input type = "submit" value = "Log me out"></a>
+    <a href = "index.php"><input type = "submit"></a>
     
     
 
       <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">Dollar Shop</a>
+      <a class="navbar-brand">Dollar Shop</a>
     </div>
       <div class="navbar-header">
       
     </div>
       <ul class="nav navbar-nav navbar-right">
-      <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>
+      <a href = "index.php"><input type = "submit" value = "Log Out" class = "btn btn-primary navbar- btn"></a>
       </ul>
       
       
