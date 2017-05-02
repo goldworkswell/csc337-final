@@ -56,6 +56,37 @@ class DatabaseAdaptor {
         $stmt->execute();
         
         
+        
+
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 0, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 1, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 2, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 3, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 4, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 5, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
         /*$stmt = $this->DB->prepare(
         "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 1, 0);");
         $stmt->execute();
