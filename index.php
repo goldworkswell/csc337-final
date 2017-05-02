@@ -28,7 +28,9 @@ if(isset($_GET['mode'])){
      elseif ($_GET['mode'] === "login"){
      require_once "login.php";
      }
-    
+    elseif ($_GET['mode'] === "checkout"){
+        require_once "checkout.php";
+    }
     }
 else {
     require_once "shop.php";

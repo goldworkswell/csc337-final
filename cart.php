@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php
+session_start();
+require_once "adaptor.php";
+?>
 <html>
 <head>
     <link rel = "stylesheet" href = "style1.css" type = "text/css">
@@ -22,8 +25,8 @@
       <p class="navbar-brand">Username: <?=$_SESSION['user']?></p>
     </div>
       <ul class="nav navbar-nav navbar-right">
-      <a href = "cart.php"><input type = "submit" value = "Cart" class = "btn btn-danger navbar- btn"></a>
-        <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>
+      <a href = "logged_in.php"><input type = "submit" value = "Continue Shopping" class = "btn navbar- btn"></a>
+        <a href = "index.php"><input type = "submit" value = "Log Out" class = "btn btn-primary navbar- btn"></a>
       </ul>
       
       
@@ -72,11 +75,32 @@
                  <input type = "hidden" value = "5" name = "item"><input type = "submit" value = "Add to Cart" id = "b6" class = "btn btn-info"><p>$1</p></form></div>
             </div>
         </div>
+        
         </div>
-
+<form method = "get" action = "cart.php">
+    <input type = "hidden" value = "clear" name = "status">
+    <input type = "submit" value = "Empty Cart" class = "btn btn-info">
+    
+    </form>
+    
+    <form method = "get" action = "index.php">
+    <input type = "hidden" value = "checkout" name = "mode">
+    <input type = "submit" Value = "Proceed to checkout" class = "btn btn-success">
+    
+    </form>
     
       
       
 
     </body>
 </html>
+<?php 
+if (isset($_GET['status'])){
+    if($_GET['status'] === "clear"){
+        $db = new DatabaseAdaptor ();
+        $db->clear_cart($_SESSION['user']);
+    }
+}
+
+
+?>

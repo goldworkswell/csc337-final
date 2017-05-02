@@ -21,13 +21,13 @@ require_once "adaptor.php";
     </div>
    <ul class="nav navbar-nav navbar-right">
     <form action = "index.php" method = "get">
-    <input type = "hidden" value = "login" name = "mode"><input type = "submit" value = "Login" class = "btn btn-danger navbar-btn">
+    <input type = "hidden" value = "login" name = "mode"><input type = "submit" value = "Login" class = "btn btn-primary navbar-btn">
     </form>
     </ul>
       
       <ul class = "nav navbar-nav navbar-right">
       <form action = "index.php" method = "get">
-    <input type = "hidden" value ="register" name = "mode"><input type = "submit" value = "Register" class = "btn btn-danger navbar-btn" id = "test">
+    <input type = "hidden" value ="register" name = "mode"><input type = "submit" value = "Register" class = "btn navbar-btn" id = "test">
     </form>
       </ul>
       

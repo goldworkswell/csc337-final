@@ -21,6 +21,4 @@ CREATE TABLE cart (
     quant int(11),
     username varchar(64) NOT NULL
     
-
-
 );

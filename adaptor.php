@@ -105,6 +105,11 @@ class DatabaseAdaptor {
             $stmt->execute();
         }
     }
+    public function clear_cart($user){
+        $stmt = $this->DB->prepare("UPDATE cart SET quant = 0 WHERE username = :user;");
+        $stmt->bindParam('user', $user);
+        $stmt->execute();
+    }
 }
 
 # Query on the given username (if any).

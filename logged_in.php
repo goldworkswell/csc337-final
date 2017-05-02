@@ -26,8 +26,8 @@ require_once "adaptor.php";
       <p class="navbar-brand">Username: <?=$_SESSION['user']?></p>
     </div>
       <ul class="nav navbar-nav navbar-right">
-      <a href = "cart.php"><input type = "submit" value = "Cart" class = "btn btn-danger navbar- btn"></a>
-        <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>
+      <a href = "cart.php"><input type = "submit" value = "Cart" class = "btn navbar- btn"></a>
+        <a href = "index.php"><input type = "submit" value = "Log Out" class = "btn btn-primary navbar- btn"></a>
       </ul>
       
       
@@ -87,6 +87,8 @@ require_once "adaptor.php";
 <?php
     
     $data = new DatabaseAdaptor();
+          if (isset($_GET['item'])){
     $data->add_item($_SESSION['user'], $_GET['item']);
+          }
     
     ?>
