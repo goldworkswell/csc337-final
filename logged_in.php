@@ -40,7 +40,7 @@ require_once "adaptor.php";
    
     <div class = "container-fluid" id = "outside">
         <div class = "container-fluid" id = "small">
-        <h3>Small Text</h3>
+        <h1>.</h1>
         </div>
         
         <div class = "container-fluid" id = "emphasis">
@@ -48,16 +48,16 @@ require_once "adaptor.php";
         </div>
         <div class = "container-fluid" id = "pic1">
         <div class = "row">
-            <div class = "col-lg-4" id = "left1"><img src = "img_1.jpg"> <br>
+            <div class = "col-lg-4" id = "left1"><img src = "img_1.jpg">  <p id="p0">Tub O' Towels</p>
                  <form method = "get" action = "logged_in.php">
                      <input type = "hidden" value = "0" name = "item"><input type = "submit" value = "Add to Cart" id = "b1" class = "btn btn-info"><p>$1</p></form></div>
         
             
-            <div class = "col-lg-4" id = "mid1"><img src = "img_2.jpg"> <br>
+            <div class = "col-lg-4" id = "mid1"><img src = "img_2.jpg"> <p id="p1">KeySmart Key Holder</p>
                  <form method = "get" action = "logged_in.php">
                      <input type = "hidden" value = "1" name = "item"><input type = "submit" value = "Add to Cart" id = "b2" class = "btn btn-info"><p>$1</p></form></div>
             
-        <div class = "col-lg-4" id = "right1"><img src = "img_3.jpeg"><br>
+        <div class = "col-lg-4" id = "right1"><img src = "img_3.jpeg"><p id="p2">Projecto-Clock</p>
              <form method = "get" action = "logged_in.php">
                  <input type = "hidden" value = "2" name = "item"><input type = "submit" value = "Add to Cart" id = "b3" class = "btn btn-info"><p>$1</p></form></div>
         </div>
@@ -68,11 +68,11 @@ require_once "adaptor.php";
         
         <div class = "container-fluid" id = "pic2">
         <div class = "row">
-        <div class = "col-lg-4" id = "left2"><img src = "img_4.jpg"><br><form method = "get" action = "logged_in.php">
+        <div class = "col-lg-4" id = "left2"><img src = "img_4.jpg"><p id="p3">Shower Speaker</p><form method = "get" action = "logged_in.php">
                  <input type = "hidden" value = "3" name = "item"><input type = "submit" value = "Add to Cart" id = "b4" class = "btn btn-info"><p>$1</p></form></div>
-        <div class = "col-lg-4" id = "mid2"><img src = "img_5.jpg"><br><form method = "get" action = "logged_in.php">
+        <div class = "col-lg-4" id = "mid2"><img src = "img_5.jpg"><p id="p4">Anti-Anxiety Food</p><form method = "get" action = "logged_in.php">
                  <input type = "hidden" value = "4" name = "item"><input type = "submit" value = "Add to Cart" id = "b5" class = "btn btn-info"><p>$1</p></form></div>
-        <div class = "col-lg-4" id = "right2"><img src = "img_6.jpg"><br><form method = "get" action = "logged_in.php">
+        <div class = "col-lg-4" id = "right2"><img src = "img_6.jpg"><p id="p4">Laptop?</p><form method = "get" action = "logged_in.php">
                  <input type = "hidden" value = "5" name = "item"><input type = "submit" value = "Add to Cart" id = "b6" class = "btn btn-info"><p>$1</p></form></div>
             </div>
         </div>

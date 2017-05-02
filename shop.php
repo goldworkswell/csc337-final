@@ -40,14 +40,15 @@ require_once "adaptor.php";
 </nav>
     
         <div class = "container-fluid" id = "outside">
-        <div class = "container-fluid" id = "small"><h1>Small Text</h1>
+        <div class = "container-fluid" id = "small"><h1>.</h1>
         
         
         <div class = "container-fluid" id = "pic1">
         <div class = "row">
-            <div class = "col-lg-4" id = "left1"><img src = "img_1.jpg"> <br><button id = "b1" class = "btn btn-info">Add to cart</button> <p>$1</p></div>
-        <div class = "col-lg-4" id = "mid1"><img src = "img_2.jpg"> <br><button id = "b2" class = "btn btn-info">Add to cart</button><p>$1</p></div>
-        <div class = "col-lg-4" id = "right1"><img src = "img_3.jpeg"><br><button id = "b3" class = "btn btn-info">Add to cart</button><p>$1</p></div>
+            
+            <div class = "col-lg-4" id = "left1"><img src = "img_1.jpg"> <p>Tub O' Towels</p><button id = "b1" class = "btn btn-info">Add to cart</button> <p>$1</p></div>
+        <div class = "col-lg-4" id = "mid1"><img src = "img_2.jpg"> <p>KeySmart Key Holder</p><button id = "b2" class = "btn btn-info">Add to cart</button><p>$1</p></div>
+        <div class = "col-lg-4" id = "right1"><img src = "img_3.jpeg"><p>Projecto-Clock</p><button id = "b3" class = "btn btn-info">Add to cart</button><p>$1</p></div>
         </div>
         </div>
         
@@ -57,9 +58,9 @@ require_once "adaptor.php";
         
         <div class = "container-fluid" id = "pic2">
         <div class = "row">
-        <div class = "col-lg-4" id = "left2"><img src = "img_4.jpg"><br><button id = "b4" class = "btn btn-info">Add to cart</button><p>$1</p></div>
-        <div class = "col-lg-4" id = "mid2"><img src = "img_5.jpg"><br><button id = "b5" class = "btn btn-info">Add to cart</button><p>$1</p></div>
-        <div class = "col-lg-4" id = "right2"><img src = "img_6.jpg"><br><button id = "b6" class = "btn btn-info">Add to cart</button><p>$1</p></div>
+        <div class = "col-lg-4" id = "left2"><img src = "img_4.jpg"><p>Shower Speaker</p><button id = "b4" class = "btn btn-info">Add to cart</button><p>$1</p></div>
+        <div class = "col-lg-4" id = "mid2"><img src = "img_5.jpg"><p>Anti-Anxiety Food</p><button id = "b5" class = "btn btn-info">Add to cart</button><p>$1</p></div>
+        <div class = "col-lg-4" id = "right2"><img src = "img_6.jpg"><p>Laptop?</p><button id = "b6" class = "btn btn-info">Add to cart</button><p>$1</p></div>
         </div>
         </div>
     </div>
