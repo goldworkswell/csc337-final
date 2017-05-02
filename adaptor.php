@@ -24,6 +24,53 @@ class DatabaseAdaptor {
         $stmt->bindParam('username', $username);
         $stmt->bindParam('password', $hashed_pwd);
         $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 0, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 1, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 2, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 3, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 4, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 5, 0, :username);");
+        $stmt->bindParam('username', $username);
+        $stmt->execute();
+        
+        
+        /*$stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 1, 0);");
+        $stmt->execute();
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 2, 0);");
+        $stmt->execute();
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 3, 0);");
+        $stmt->execute();
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 4, 0);");
+        $stmt->execute();
+        $stmt = $this->DB->prepare(
+        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 5, 0);");
+        $stmt->execute();*/
         }
     public function login($username, $password){
         $stmt = $this->DB->prepare(
@@ -49,7 +96,15 @@ class DatabaseAdaptor {
             $row['status']='success';
         }
         return json_encode($row);
-    }  
+    }
+    public function add_item($id, $item_id){
+        if (isset($_GET['item'])){
+            $stmt = $this->DB->prepare("UPDATE cart SET quant = quant + 1 WHERE item_id = :item_id AND username = :id;");
+            $stmt->bindParam('item_id', $item_id);
+            $stmt->bindParam('id',$id);
+            $stmt->execute();
+        }
+    }
 }
 
 # Query on the given username (if any).

@@ -40,8 +40,7 @@ require_once "adaptor.php";
 </nav>
     
         <div class = "container-fluid" id = "outside">
-        <div class = "container-fluid" id = "small">
-        </div>
+        <div class = "container-fluid" id = "small"><h1>Small Text</h1>
         
         
         <div class = "container-fluid" id = "pic1">
@@ -64,7 +63,8 @@ require_once "adaptor.php";
         </div>
         </div>
     </div>
-    <br>
+    </div>
+            <br>
     <p id = "output"></p>
    
 </body>

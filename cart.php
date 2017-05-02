@@ -1,8 +1,4 @@
-<?php
-session_start();
-require_once "adaptor.php";
-?>
-
+<?php session_start() ?>
 <html>
 <head>
     <link rel = "stylesheet" href = "style1.css" type = "text/css">
@@ -84,9 +80,3 @@ require_once "adaptor.php";
 
     </body>
 </html>
-<?php
-    
-    $data = new DatabaseAdaptor();
-    $data->add_item($_SESSION['user'], $_GET['item']);
-    
-    ?>

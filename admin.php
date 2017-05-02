@@ -21,7 +21,7 @@ session_start();
       <a class="navbar-brand" href="index.php">Dollar Shop</a>
     </div>
       <div class="navbar-header">
-      <p class="navbar-brand" id = "lin">Username: <?=$_SESSION['user']?></p>
+      
     </div>
       <ul class="nav navbar-nav navbar-right">
       <a href = "index.php"><input type = "submit" value = "Log me out" class = "btn btn-danger navbar- btn"></a>

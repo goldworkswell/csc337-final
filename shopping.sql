@@ -15,3 +15,12 @@ CREATE TABLE inventory (
     quantity int(11),
     PRIMARY KEY (shopper_id)
 );
+CREATE TABLE cart (
+    user_id int(11) NOT NULL,
+    item_id varchar(64) NOT NULL,
+    quant int(11),
+    username varchar(64) NOT NULL
+    
+
+
+);
