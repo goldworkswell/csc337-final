@@ -9,6 +9,7 @@ CREATE TABLE users (
     PRIMARY KEY (id),
     UNIQUE KEY (username)
 );
+INSERT INTO users (id, username, pass, registered) VALUES (1, "Admin", "1234", now());
 CREATE TABLE admin (
     user_id int(11) NOT NULL,
     item_id varchar(64) NOT NULL,

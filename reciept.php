@@ -1,6 +1,13 @@
 <?php
 session_start();
 require_once "adaptor.php";
+$data = new DatabaseAdaptor();
+$data->up_admin($_SESSION['user']);
+$data->clear_cart($_SESSION['user']);
+
+
+
+
 ?>
 <html>
 <head>

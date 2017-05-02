@@ -39,6 +39,9 @@ if (isset($_SESSION['user'])){
     if ($_SESSION['user'] === "Admin"){
     header('Location: admin.php');
 }
+    else if ($_SESSION['user'] === "admin"){
+        header('Location: admin.php');
+    }
     else {
     header('Location: logged_in.php');
     }

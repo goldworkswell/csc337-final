@@ -46,7 +46,7 @@ require_once "adaptor.php";
     
     </form>
     
-    <form method = "get" action = "index.php">
+    <form method = "get" action = "checkout.php">
     <input type = "hidden" value = "checkout" name = "mode">
     <input type = "submit" Value = "Proceed to checkout" class = "btn btn-success">
     
