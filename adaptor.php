@@ -15,7 +15,7 @@ class DatabaseAdaptor {
             echo ('error');
             exit();
         }
-        }
+    }
     public function add ($username, $password) {
         $hashed_pwd = password_hash($password, PASSWORD_DEFAULT);
         
@@ -43,13 +43,11 @@ class DatabaseAdaptor {
         if($row==NULL)
         {
              $row['status']='failed';
-      
         }
         else
         {
             $row['status']='success';
         }
-        
         return json_encode($row);
     }  
 }
