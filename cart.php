@@ -63,22 +63,22 @@ require_once "adaptor.php";
     
     foreach($arr as $record){
         if($record['item_id'] == 0){
-            echo '<h3>Tub O towels * '.$record['quant']. '</h3>';
+            echo '<h3>Tub O towels * '.$record['quant'].' Price: $'. $record['quant'] .'</h3>';
         }
         elseif($record['item_id'] == 1){
-            echo '<h3>KeySmart Key Holder * '.$record['quant']. '</h3>';
+            echo '<h3>KeySmart Key Holder * '.$record['quant'].' Price: $'. $record['quant'] . '</h3>';
         }
         elseif($record['item_id'] == 2){
-            echo '<h3>Projecto-Clock * '.$record['quant']. '</h3>';
+            echo '<h3>Projecto-Clock * '.$record['quant'].' Price: $'. $record['quant'] . '</h3>';
         }
         elseif($record['item_id'] == 3){
-            echo '<h3>Shower Speaker * '.$record['quant']. '</h3>';
+            echo '<h3>Shower Speaker * '.$record['quant'].' Price: $'. $record['quant'] . '</h3>';
         }
         elseif($record['item_id'] == 4){
-            echo '<h3>Anti-Anxiety Food * '.$record['quant']. '</h3>';
+            echo '<h3>Anti-Anxiety Food * '.$record['quant'].' Price: $'. $record['quant'] . '</h3>';
         }
         elseif($record['item_id'] == 5){
-            echo '<h3>Laptop * '.$record['quant']. '</h3>';
+            echo '<h3>Laptop * '.$record['quant'].' Price: $'. $record['quant'] . '</h3>';
         }
     }      
           
