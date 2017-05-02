@@ -1,4 +1,5 @@
 <?php
+require_once "adaptor.php";
 session_start();
 ?>
 <html>
@@ -34,6 +35,17 @@ session_start();
       
   </div>
 </nav>
+ <h1>.</h1>   
+    
+    <?php 
+    
+    $db = new DatabaseAdaptor();
+    $array = $db->admin_report();
+    foreach ($array as $record){
+        echo '<h3> '.$record['username'].'   purchased '.$record['quant'].'  '.$record['product_name'].'</h3>';
+    }
+    
+    ?>
     
     
     

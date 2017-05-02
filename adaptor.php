@@ -155,6 +155,11 @@ class DatabaseAdaptor {
             
         }
     }
+    public function admin_report(){
+        $stmt=$this->DB->prepare("select * from admin join products on admin.item_id = products.product_id where quant != 0;");
+        $stmt->execute();
+        return $stmt->fetchALL(PDO::FETCH_ASSOC);
+    }
 }
 
 # Query on the given username (if any).
