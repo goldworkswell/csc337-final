@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once "adaptor.php";
+?>
+
 <html>
 <head>
     <link rel = "stylesheet" href = "style.css" type = "text/css">

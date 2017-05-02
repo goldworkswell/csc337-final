@@ -9,6 +9,7 @@ require_once "adaptor.php";
     <link rel = "stylesheet" href = "style.css" type = "text/css">
      <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src = "script2.js"></script>
     </head>
 <body>
     
@@ -77,7 +78,7 @@ require_once "adaptor.php";
             </div>
         </div>
         </div>
-
+<p id = "output"></p>
     
       
       
@@ -90,5 +91,25 @@ require_once "adaptor.php";
           if (isset($_GET['item'])){
     $data->add_item($_SESSION['user'], $_GET['item']);
           }
-    
+          if (isset($_GET['item'])){
+          if ($_GET['item'] == 0){
+              echo "<p>Added 1 tub of towels to cart</p>";
+          }
+              if ($_GET['item'] == 1){
+              echo "<p>Added 1 keysmart keyholder to cart</p>";
+          }
+              if ($_GET['item'] == 2){
+              echo "<p>Added 1 projecto-clock to cart</p>";
+          }
+            if ($_GET['item'] == 3){
+              echo "<p>Added 1 shower speaker to cart</p>";
+          }
+              if ($_GET['item'] == 4){
+              echo "<p>Added 1 anti-anxiety food to cart</p>";
+          }
+              if ($_GET['item'] == 5){
+              echo "<p>Added 1 laptop to cart</p>";
+          }
+              
+          }
     ?>

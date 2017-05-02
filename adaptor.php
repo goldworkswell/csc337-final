@@ -87,21 +87,6 @@ class DatabaseAdaptor {
         "INSERT INTO admin (user_id, item_id, quant, username) VALUES ((SELECT id from users where username = '$username'), 5, 0, :username);");
         $stmt->bindParam('username', $username);
         $stmt->execute();
-        /*$stmt = $this->DB->prepare(
-        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 1, 0);");
-        $stmt->execute();
-        $stmt = $this->DB->prepare(
-        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 2, 0);");
-        $stmt->execute();
-        $stmt = $this->DB->prepare(
-        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 3, 0);");
-        $stmt->execute();
-        $stmt = $this->DB->prepare(
-        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 4, 0);");
-        $stmt->execute();
-        $stmt = $this->DB->prepare(
-        "INSERT INTO cart (user_id, item_id, quant) VALUES ((SELECT id from users where username = '$username'), 5, 0);");
-        $stmt->execute();*/
         }
     public function login($username, $password){
         $stmt = $this->DB->prepare(
@@ -140,6 +125,12 @@ class DatabaseAdaptor {
         $stmt = $this->DB->prepare("UPDATE cart SET quant = 0 WHERE username = :user;");
         $stmt->bindParam('user', $user);
         $stmt->execute();
+    }
+    public function get_cart_as_array($user) {
+        $stmt=$this->DB->prepare("SELECT * FROM cart WHERE username = :user;");
+        $stmt->bindParam('user', $user);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

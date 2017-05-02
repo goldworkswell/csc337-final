@@ -37,47 +37,10 @@ require_once "adaptor.php";
   </div>
 </nav>
    
-    <div class = "container-fluid" id = "outside">
-        <div class = "container-fluid" id = "small">
-        <h3>Small Text</h3>
-        </div>
-        
-        <div class = "container-fluid" id = "emphasis">
-        <h2></h2>
-        </div>
-        <div class = "container-fluid" id = "pic1">
-        <div class = "row">
-            <div class = "col-lg-4" id = "left1"><img src = "img_1.jpg"> <br>
-                 <form method = "get" action = "logged_in.php">
-                     <input type = "hidden" value = "0" name = "item"><input type = "submit" value = "Add to Cart" id = "b1" class = "btn btn-info"><p>$1</p></form></div>
-        
-            
-            <div class = "col-lg-4" id = "mid1"><img src = "img_2.jpg"> <br>
-                 <form method = "get" action = "logged_in.php">
-                     <input type = "hidden" value = "1" name = "item"><input type = "submit" value = "Add to Cart" id = "b2" class = "btn btn-info"><p>$1</p></form></div>
-            
-        <div class = "col-lg-4" id = "right1"><img src = "img_3.jpeg"><br>
-             <form method = "get" action = "logged_in.php">
-                 <input type = "hidden" value = "2" name = "item"><input type = "submit" value = "Add to Cart" id = "b3" class = "btn btn-info"><p>$1</p></form></div>
-        </div>
-        </div>
-        <div class = "container-fluid" id = "editing">
-        <h2></h2>
-        </div>
-        
-        <div class = "container-fluid" id = "pic2">
-        <div class = "row">
-        <div class = "col-lg-4" id = "left2"><img src = "img_4.jpg"><br><form method = "get" action = "logged_in.php">
-                 <input type = "hidden" value = "3" name = "item"><input type = "submit" value = "Add to Cart" id = "b4" class = "btn btn-info"><p>$1</p></form></div>
-        <div class = "col-lg-4" id = "mid2"><img src = "img_5.jpg"><br><form method = "get" action = "logged_in.php">
-                 <input type = "hidden" value = "4" name = "item"><input type = "submit" value = "Add to Cart" id = "b5" class = "btn btn-info"><p>$1</p></form></div>
-        <div class = "col-lg-4" id = "right2"><img src = "img_6.jpg"><br><form method = "get" action = "logged_in.php">
-                 <input type = "hidden" value = "5" name = "item"><input type = "submit" value = "Add to Cart" id = "b6" class = "btn btn-info"><p>$1</p></form></div>
-            </div>
-        </div>
-        
-        </div>
-<form method = "get" action = "cart.php">
+  
+    <h1>.</h1>
+<div id = "bob">
+    <form method = "get" action = "cart.php">
     <input type = "hidden" value = "clear" name = "status">
     <input type = "submit" value = "Empty Cart" class = "btn btn-info">
     
@@ -88,18 +51,46 @@ require_once "adaptor.php";
     <input type = "submit" Value = "Proceed to checkout" class = "btn btn-success">
     
     </form>
-    
+    </div>
       
-      
+      <?php ?>
 
     </body>
 </html>
-<?php 
+<?php
+    $dab = new DatabaseAdaptor();
+    $arr = $dab->get_cart_as_array($_SESSION['user']);
+    
+    foreach($arr as $record){
+        if($record['item_id'] == 0){
+            echo '<h3>Tub O towels * '.$record['quant']. '</h3>';
+        }
+        elseif($record['item_id'] == 1){
+            echo '<h3>KeySmart Key Holder * '.$record['quant']. '</h3>';
+        }
+        elseif($record['item_id'] == 2){
+            echo '<h3>Projecto-Clock * '.$record['quant']. '</h3>';
+        }
+        elseif($record['item_id'] == 3){
+            echo '<h3>Shower Speaker * '.$record['quant']. '</h3>';
+        }
+        elseif($record['item_id'] == 4){
+            echo '<h3>Anti-Anxiety Food * '.$record['quant']. '</h3>';
+        }
+        elseif($record['item_id'] == 5){
+            echo '<h3>Laptop * '.$record['quant']. '</h3>';
+        }
+    }      
+          
+          
+          
 if (isset($_GET['status'])){
     if($_GET['status'] === "clear"){
         $db = new DatabaseAdaptor ();
         $db->clear_cart($_SESSION['user']);
+        
     }
+    
 }
 
 
