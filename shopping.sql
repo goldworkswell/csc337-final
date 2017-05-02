@@ -23,3 +23,13 @@ CREATE TABLE cart (
     username varchar(64) NOT NULL
     
 );
+CREATE TABLE products (
+    product_id int(11)NOT NULL,
+    product_name varchar(64) NOT NULL
+);
+INSERT INTO products (product_id,product_name) VALUES(0,"Tub O' Towels");
+INSERT INTO products (product_id,product_name) VALUES(1,"KeySmart Key Holder");
+INSERT INTO products (product_id,product_name) VALUES(2,"projecto-Clock");
+INSERT INTO products (product_id,product_name) VALUES(3,"SHower Speaker");
+INSERT INTO products (product_id,product_name) VALUES(4,"Anti-Anxiety Food");
+INSERT INTO products (product_id,product_name) VALUES(5,"Laptop?");
